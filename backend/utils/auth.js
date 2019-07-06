@@ -17,12 +17,14 @@ const validateLogin = async (username, password) => {
 
       hash.compare(password, hashedPassword)
         .then(() => {
-          resolve(data);
+          return resolve(data);
         })
         .catch(() => {
-          reject(false);
+          return reject(false);
         });
-    } else reject(false);
+    }
+
+    else return reject(false);
   });
 };
 
