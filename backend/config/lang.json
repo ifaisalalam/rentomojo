@@ -36,6 +36,18 @@
             "text": "You're not authorized to perform this action."
           }
         }
+      },
+      "comments": {
+        "NEW_COMMENT_FAILURE": {
+          "code": "NEW_COMMENT_FAILURE",
+          "text": "Failed to add comment! Please retry."
+        }
+      },
+      "generic": {
+        "UNKNOWN_ERROR": {
+          "code": "UNKNOWN_ERROR",
+          "text": "Something went wrong! Please try again."
+        }
       }
     },
     "success": {
@@ -50,6 +62,20 @@
           "LOGIN_SUCCESS": {
             "code": "LOGIN_SUCCESS",
             "text": "Login successful."
+          }
+        }
+      },
+      "comments": {
+        "add": {
+          "COMMENT_ADDED": {
+            "code": "COMMENT_ADDED",
+            "text": "Comment added successfully."
+          }
+        },
+        "retrieve": {
+          "COMMENTS_RETRIEVED": {
+            "code": "COMMENTS_RETRIEVED",
+            "text": "Comments retrieved successfully."
           }
         }
       }

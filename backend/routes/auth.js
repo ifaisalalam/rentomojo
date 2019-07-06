@@ -7,7 +7,9 @@ const jwt = require('../utils/jwt');
 
 const authMiddleware = require('../middlewares/auth');
 
-router.post('/login', authMiddleware.guest, (req, res, next) => {
+router.use(authMiddleware.guest);
+
+router.post('/login', (req, res, next) => {
   const username = (req.body.username || '').trim();
   const password = req.body.password || '';
 
@@ -19,10 +21,12 @@ router.post('/login', authMiddleware.guest, (req, res, next) => {
         status: 'success',
         code: lang.messages.success.auth.login.LOGIN_SUCCESS.code,
         message: lang.messages.success.auth.login.LOGIN_SUCCESS.text,
-        user: {
-          username: user.username
-        },
-        token
+        payload: {
+          user: {
+            username: user.username
+          },
+          token
+        }
       };
 
       res.status(200).json(data);
@@ -38,7 +42,7 @@ router.post('/login', authMiddleware.guest, (req, res, next) => {
     });
 });
 
-router.post('/register', authMiddleware.guest, (req, res, next) => {
+router.post('/register', (req, res, next) => {
   const username = (req.body.username || '').trim();
   const password = req.body.password || '';
 
@@ -50,10 +54,12 @@ router.post('/register', authMiddleware.guest, (req, res, next) => {
         status: 'success',
         code: lang.messages.success.auth.register.REGISTER_SUCCESS.code,
         message: lang.messages.success.auth.register.REGISTER_SUCCESS.text,
-        user: {
-          username: user.username
-        },
-        token
+        payload: {
+          user: {
+            username: user.username
+          },
+          token
+        }
       };
 
       res.status(201).json(data);

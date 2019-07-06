@@ -5,7 +5,8 @@ const bearerToken = require('express-bearer-token');
 const logger = require('morgan');
 
 const routes = {
-  indexRouter: require('./routes/index'),
+  auth: require('./routes/auth'),
+  comment: require('./routes/comments')
 };
 
 const app = express();
@@ -19,7 +20,8 @@ app.use(bearerToken({
   reqKey: 'token'
 }));
 
-app.use('/api', routes.indexRouter);
+app.use('/auth', routes.auth);
+app.use('/comments', routes.comment);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
