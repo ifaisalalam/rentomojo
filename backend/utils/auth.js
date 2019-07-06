@@ -1,7 +1,4 @@
-// const firestore = require('./firestore')();
-
-const {Firestore} = require('@google-cloud/firestore');
-const firestore = new Firestore();
+const firestore = require('./firestore')();
 
 const lang = require('../config/lang');
 const hash = require('./hashing');
@@ -20,11 +17,11 @@ const validateLogin = async (username, password) => {
           return resolve(data);
         })
         .catch(() => {
-          return reject(false);
+          return reject();
         });
     }
 
-    else return reject(false);
+    else return reject();
   });
 };
 
@@ -33,7 +30,7 @@ const createAccount = async (username, password) => {
 
   return await firestore.runTransaction(t => {
     return t.get(docRef)
-      .then(doc => {
+      .then(async doc => {
         if (doc.exists) {
           const errorCode = lang.messages.error.auth.register.USERNAME_NOT_AVAILABLE.code;
           const errorText = lang.messages.error.auth.register.USERNAME_NOT_AVAILABLE.text;
@@ -46,11 +43,11 @@ const createAccount = async (username, password) => {
 
         const data = {
           username,
-          password
+          password: await hash.make(password)
         };
 
         t.set(docRef, data);
-        return Promise.resolve(lang.messages.success.auth.register.REGISTER_SUCCESS.code);
+        return Promise.resolve(data);
       })
       .catch(err => {
         return Promise.reject(err);

@@ -12,6 +12,28 @@
           "USERNAME_NOT_AVAILABLE": {
             "code": "USERNAME_NOT_AVAILABLE",
             "text": "Username not available."
+          },
+          "ERROR_UNKNOWN": {
+            "code": "ERROR_UNKNOWN",
+            "text": "Something went wrong! Please try again."
+          }
+        },
+        "required": {
+          "NOT_AUTHENTICATED": {
+            "code": "NOT_AUTHENTICATED",
+            "text": "Please login to continue."
+          },
+          "NOT_AUTHORIZED": {
+            "code": "NOT_AUTHORIZED",
+            "text": "You're not authorized to perform this action."
+          }
+        }
+      },
+      "guest": {
+        "required": {
+          "NOT_AUTHORIZED": {
+            "code": "NOT_AUTHORIZED",
+            "text": "You're not authorized to perform this action."
           }
         }
       }
@@ -22,6 +44,12 @@
           "REGISTER_SUCCESS": {
             "code": "REGISTER_SUCCESS",
             "text": "Account created successfully."
+          }
+        },
+        "login": {
+          "LOGIN_SUCCESS": {
+            "code": "LOGIN_SUCCESS",
+            "text": "Login successful."
           }
         }
       }
