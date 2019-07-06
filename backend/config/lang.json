@@ -1,0 +1,30 @@
+{
+  "messages": {
+    "error": {
+      "auth": {
+        "login": {
+          "INVALID_CREDENTIALS": {
+            "code": "INVALID_CREDENTIALS",
+            "text": "Invalid username or password."
+          }
+        },
+        "register": {
+          "USERNAME_NOT_AVAILABLE": {
+            "code": "USERNAME_NOT_AVAILABLE",
+            "text": "Username not available."
+          }
+        }
+      }
+    },
+    "success": {
+      "auth": {
+        "register": {
+          "REGISTER_SUCCESS": {
+            "code": "REGISTER_SUCCESS",
+            "text": "Account created successfully."
+          }
+        }
+      }
+    }
+  }
+}
