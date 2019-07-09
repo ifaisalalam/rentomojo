@@ -28,6 +28,7 @@ module.exports = {
     } catch (error) {
       req.authenticated = false;
 
+      res.setHeader('WWW-Authenticate', 'Bearer realm="API", charset="UTF-8"');
       return res.status(401).json({
         status: 'error',
         code: lang.messages.error.auth.required.NOT_AUTHENTICATED.code,
