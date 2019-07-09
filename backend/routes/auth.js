@@ -5,7 +5,7 @@ const lang = require('../config/lang');
 const auth = require('../utils/auth');
 const jwt = require('../utils/jwt');
 
-const authMiddleware = require('../middlewares/auth');
+const authMiddleware = require('../middlewares/authMiddleware');
 
 router.use(authMiddleware.guest);
 
@@ -22,9 +22,7 @@ router.post('/login', (req, res, next) => {
         code: lang.messages.success.auth.login.LOGIN_SUCCESS.code,
         message: lang.messages.success.auth.login.LOGIN_SUCCESS.text,
         payload: {
-          user: {
-            username: user.username
-          },
+          user,
           token
         }
       };
@@ -55,9 +53,7 @@ router.post('/register', (req, res, next) => {
         code: lang.messages.success.auth.register.REGISTER_SUCCESS.code,
         message: lang.messages.success.auth.register.REGISTER_SUCCESS.text,
         payload: {
-          user: {
-            username: user.username
-          },
+          user,
           token
         }
       };

@@ -10,4 +10,4 @@ const firestore = (options = {}) => new Firestore({
   ...options
 });
 
-module.exports = firestore;
+exports = module.exports = firestore;

@@ -15,7 +15,7 @@
           },
           "ERROR_UNKNOWN": {
             "code": "ERROR_UNKNOWN",
-            "text": "Something went wrong! Please try again."
+            "text": "Something went wrong, please try again."
           }
         },
         "required": {
@@ -41,12 +41,22 @@
         "NEW_COMMENT_FAILURE": {
           "code": "NEW_COMMENT_FAILURE",
           "text": "Failed to add comment! Please retry."
+        },
+        "REFERENCE_ERROR": {
+          "code": "REFERENCE_ERROR",
+          "text": "Comment does not exists."
+        }
+      },
+      "vote": {
+        "VOTE_ERROR": {
+          "code": "VOTE_ERROR",
+          "text": "Something went wrong, please try again."
         }
       },
       "generic": {
         "UNKNOWN_ERROR": {
           "code": "UNKNOWN_ERROR",
-          "text": "Something went wrong! Please try again."
+          "text": "Something went wrong, please try again."
         }
       }
     },
@@ -76,6 +86,16 @@
           "COMMENTS_RETRIEVED": {
             "code": "COMMENTS_RETRIEVED",
             "text": "Comments retrieved successfully."
+          }
+        },
+        "vote": {
+          "UPVOTE_SUCCESS": {
+            "code": "UPVOTE_SUCCESS",
+            "text": "You upvoted this comment."
+          },
+          "DOWNVOTE_SUCCESS": {
+            "code": "DOWNVOTE_SUCCESS",
+            "text": "You downvoted this comment."
           }
         }
       }

@@ -9,12 +9,17 @@ const validateLogin = async (username, password) => {
 
   return new Promise((resolve, reject) => {
     if (doc.exists) {
-      const data = doc.data();
-      const hashedPassword = data.password;
+      const user = {
+        username: doc.id,
+        data: doc.data(),
+        createTime: doc.createTime,
+        updateTime: doc.updateTime
+      };
+      const hashedPassword = user.data.password;
 
       hash.compare(password, hashedPassword)
         .then(() => {
-          return resolve(data);
+          return resolve(user);
         })
         .catch(() => {
           return reject();
@@ -46,10 +51,15 @@ const createAccount = async (username, password) => {
           password: await hash.make(password)
         };
 
-        t.set(docRef, data);
-        return Promise.resolve(data);
+        t.create(docRef, data);
+
+        return Promise.resolve({
+          username,
+          data,
+        });
       })
       .catch(err => {
+        console.error(err);
         return Promise.reject(err);
       });
   });

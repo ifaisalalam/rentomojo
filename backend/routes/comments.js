@@ -4,7 +4,7 @@ const router = express.Router();
 const lang = require('../config/lang');
 const commentUtil = require('../utils/comments');
 
-const authMiddleware = require('../middlewares/auth');
+const authMiddleware = require('../middlewares/authMiddleware');
 
 router.use(authMiddleware.user);
 
@@ -51,6 +51,60 @@ router.post('/add', (req, res, next) => {
         message: lang.messages.error.comments.NEW_COMMENT_FAILURE.text
       });
     })
+});
+
+router.post('/upvote', (req, res, next) => {
+  const commentRef = req.body.commentId;
+
+  commentUtil.upvote(commentRef, req.payload.username)
+    .then(comment => {
+      const data = {
+        status: 'success',
+        code: lang.messages.success.comments.vote.UPVOTE_SUCCESS.code,
+        message: lang.messages.success.comments.vote.UPVOTE_SUCCESS.text,
+        payload: {
+          comment
+        }
+      };
+
+      res.status(201).json(data);
+    })
+    .catch(err => {
+      const data = {
+        status: 'error',
+        code: lang.messages.error.vote.VOTE_ERROR.code,
+        message: lang.messages.error.vote.VOTE_ERROR.text
+      };
+
+      res.status(500).json(data);
+    });
+});
+
+router.post('/downvote', (req, res, next) => {
+  const commentRef = req.body.commentId;
+
+  commentUtil.downvote(commentRef, req.payload.username)
+    .then(comment => {
+      const data = {
+        status: 'success',
+        code: lang.messages.success.comments.vote.DOWNVOTE_SUCCESS.code,
+        message: lang.messages.success.comments.vote.DOWNVOTE_SUCCESS.text,
+        payload: {
+          comment
+        }
+      };
+
+      res.status(201).json(data);
+    })
+    .catch(err => {
+      const data = {
+        status: 'error',
+        code: lang.messages.error.vote.VOTE_ERROR.code,
+        message: lang.messages.error.vote.VOTE_ERROR.text
+      };
+
+      res.status(500).json(data);
+    });
 });
 
 module.exports = router;
