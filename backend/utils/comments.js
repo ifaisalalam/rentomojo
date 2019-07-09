@@ -29,18 +29,21 @@ const addComment = async (user, comment) => {
   return await firestore.runTransaction(t => {
     let promises = [];
 
-    const comment = {
+    const commentData = {
       user,
       comment,
       upvotes: 0,
       downvotes: 0
     };
 
-    promises.push(t.set(newCommentCollection, comment));
+    promises.push(t.set(newCommentCollection, commentData));
     promises.push(t.set(newVoteCollection, {dummy: 0}));
 
     return Promise.all(promises)
-      .then(() => Promise.resolve(comment))
+      .then(() => Promise.resolve({
+        id: newCommentCollection.id,
+        data: commentData
+      }))
       .catch(err => Promise.reject(err));
   });
 };

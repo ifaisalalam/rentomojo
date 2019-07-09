@@ -3,14 +3,16 @@ const lang = require('../config/lang');
 
 module.exports = {
   canVote: (req, res, next) => {
-    const user = req.payload.user.username;
+    const user = req.payload.username;
     const comment = req.body.commentId;
 
     commentUtil.findCommentOwner(comment)
       .then(commentOwner => {
 
+        console.log(user, commentOwner);
+
         // User cannot vote its own comment.
-        if (commentOwner.username === user) {
+        if (commentOwner === user) {
           return res.status(403).json({
             status: 'error',
             code: lang.messages.error.vote.SELF_VOTE_ERR.code,
