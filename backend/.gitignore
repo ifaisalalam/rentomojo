@@ -1,4 +1,10 @@
-node_modules/
-.env
+# IDE Configuration files
 .idea/
+
+# Environment variable files.
+.env
+gae_env.yaml
+
+# Others
+node_modules/
 credentials.json

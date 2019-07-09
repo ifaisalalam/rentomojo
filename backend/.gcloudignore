@@ -1,0 +1,15 @@
+# Ignore IDE configuration files
+.idea/
+
+# Ignore Git
+.git/
+.gitignore
+
+# Ignore environment files
+.env
+.env.example
+gae_env.example.yaml
+
+# Others
+node_modules/
+credentials.json
