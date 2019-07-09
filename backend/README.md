@@ -258,8 +258,8 @@ Else, if the user can vote the comment, `HTTP Status 201` is returned with the f
 ```json
 {
     "status": "success",
-    "code": "UPVOTE_SUCCESS",
-    "message": "You upvoted this comment.",
+    "code": "DOWNVOTE_SUCCESS",
+    "message": "You downvoted this comment.",
     "payload": {
         "comment": {
             "id": "eZJx4xE0nbMuAkSTlaoK",
