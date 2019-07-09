@@ -10,6 +10,7 @@ Link: [https://api.rentomojo.ml](https://api.rentomojo.ml)
 **Request**
 ```http request
 POST /auth/login/
+Host: api.rentomojo.ml:443
 
 Content-Type: application/json
 Accept: application/json
@@ -43,6 +44,7 @@ Accept: application/json
 **Request**
 ```http request
 POST /auth/login
+Host: api.rentomojo.ml:443
 
 Content-Type: application/json
 Accept: application/json
@@ -84,6 +86,7 @@ Accept: application/json
 **Request**
 ```http request
 GET /comments
+Host: api.rentomojo.ml:443
 
 Content-Type: application/json
 Accept: application/json
@@ -140,6 +143,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImlmY
 **Request**
 ```http request
 POST /comments/add
+Host: api.rentomojo.ml:443
 
 Content-Type: application/json
 Accept: application/json
@@ -175,6 +179,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImlmY
 **Request**
 ```http request
 POST /comments/upvote
+Host: api.rentomojo.ml:443
 
 Content-Type: application/json
 Accept: application/json
@@ -222,6 +227,7 @@ Else, if the user can vote the comment, `HTTP Status 201` is returned with the f
 **Request**
 ```http request
 POST /comments/downvote
+Host: api.rentomojo.ml:443
 
 Content-Type: application/json
 Accept: application/json
