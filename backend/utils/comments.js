@@ -170,7 +170,10 @@ const findCommentOwner = async commentId => {
     return Promise.resolve(commentOwner);
   }
 
-  return Promise.reject(new Error('Comment does not exist.'));
+  const error = new Error(lang.messages.error.comments.REFERENCE_ERROR.text);
+  error.code = lang.messages.error.comments.REFERENCE_ERROR.code;
+
+  return Promise.reject(error);
 };
 
 module.exports = {
