@@ -259,6 +259,8 @@ If the user tries to vote its own comment, an `HTTP Status 403` is returned with
 ```
 
 Else, if the user can vote the comment, `HTTP Status 201` is returned with the following data.
+
+**NOTE:** Notice that since the user has previously upvoted this comment, the `upvotes` counter has been *decremented* and the `downvotes` counter is incremented by one.
 ```json
 {
     "status": "success",
