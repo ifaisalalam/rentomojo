@@ -9,8 +9,7 @@ API: [https://api.rentomojo.ml](https://api.rentomojo.ml)
 
 **Request**
 ```http request
-POST /auth/login/
-
+POST /auth/login/ HTTP/1.1
 Host: api.rentomojo.ml:443
 Content-Type: application/json
 Accept: application/json
@@ -43,8 +42,7 @@ Accept: application/json
 
 **Request**
 ```http request
-POST /auth/login
-
+POST /auth/login HTTP/1.1
 Host: api.rentomojo.ml:443
 Content-Type: application/json
 Accept: application/json
@@ -85,8 +83,7 @@ Accept: application/json
 
 **Request**
 ```http request
-GET /comments
-
+GET /comments HTTP/1.1
 Host: api.rentomojo.ml:443
 Content-Type: application/json
 Accept: application/json
@@ -142,8 +139,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImlmY
 
 **Request**
 ```http request
-POST /comments/add
-
+POST /comments/add HTTP/1.1
 Host: api.rentomojo.ml:443
 Content-Type: application/json
 Accept: application/json
@@ -178,8 +174,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImlmY
 
 **Request**
 ```http request
-POST /comments/upvote
-
+POST /comments/upvote HTTP/1.1
 Host: api.rentomojo.ml:443
 Content-Type: application/json
 Accept: application/json
@@ -234,8 +229,7 @@ Else, if the user can vote the comment, `HTTP Status 201` is returned with the f
 
 **Request**
 ```http request
-POST /comments/downvote
-
+POST /comments/downvote HTTP/1.1
 Host: api.rentomojo.ml:443
 Content-Type: application/json
 Accept: application/json
