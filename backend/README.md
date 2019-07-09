@@ -10,8 +10,8 @@ Link: [https://api.rentomojo.ml](https://api.rentomojo.ml)
 **Request**
 ```http request
 POST /auth/login/
-Host: api.rentomojo.ml:443
 
+Host: api.rentomojo.ml:443
 Content-Type: application/json
 Accept: application/json
 
@@ -44,8 +44,8 @@ Accept: application/json
 **Request**
 ```http request
 POST /auth/login
-Host: api.rentomojo.ml:443
 
+Host: api.rentomojo.ml:443
 Content-Type: application/json
 Accept: application/json
 
@@ -86,8 +86,8 @@ Accept: application/json
 **Request**
 ```http request
 GET /comments
-Host: api.rentomojo.ml:443
 
+Host: api.rentomojo.ml:443
 Content-Type: application/json
 Accept: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImlmYWlzYWxhbGFtMjIiLCJkYXRhIjp7InBhc3N3b3JkIjoiJDJiJDEwJGdVYnMuSlFDekVLL0JiS3Y0eWExaU96clNWMXV6RmNMSU1JLy5yWHU3ODFKTHoxVXhrTUpDIiwidXNlcm5hbWUiOiJpZmFpc2FsYWxhbTIyIn0sImNyZWF0ZVRpbWUiOnsiX3NlY29uZHMiOjE1NjI2NzU5OTQsIl9uYW5vc2Vjb25kcyI6NjY2NzU4MDAwfSwidXBkYXRlVGltZSI6eyJfc2Vjb25kcyI6MTU2MjY3NTk5NCwiX25hbm9zZWNvbmRzIjo2NjY3NTgwMDB9LCJpYXQiOjE1NjI2NzYzMDEsIm5iZiI6MTU2MjY3NjMwMSwiZXhwIjoxNTYyNjc5OTAxLCJpc3MiOiJodHRwczovL2FwaS5yZW50b21vam8ubWwvIiwic3ViIjoiSldUQXV0aCJ9.KeSfgRfCvuw3dcN1qFpLhvrlsYoV9JzLvX_A0J5z4IQ
@@ -143,8 +143,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImlmY
 **Request**
 ```http request
 POST /comments/add
-Host: api.rentomojo.ml:443
 
+Host: api.rentomojo.ml:443
 Content-Type: application/json
 Accept: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImlmYWlzYWxhbGFtMjIiLCJkYXRhIjp7InBhc3N3b3JkIjoiJDJiJDEwJGdVYnMuSlFDekVLL0JiS3Y0eWExaU96clNWMXV6RmNMSU1JLy5yWHU3ODFKTHoxVXhrTUpDIiwidXNlcm5hbWUiOiJpZmFpc2FsYWxhbTIyIn0sImNyZWF0ZVRpbWUiOnsiX3NlY29uZHMiOjE1NjI2NzU5OTQsIl9uYW5vc2Vjb25kcyI6NjY2NzU4MDAwfSwidXBkYXRlVGltZSI6eyJfc2Vjb25kcyI6MTU2MjY3NTk5NCwiX25hbm9zZWNvbmRzIjo2NjY3NTgwMDB9LCJpYXQiOjE1NjI2NzYzMDEsIm5iZiI6MTU2MjY3NjMwMSwiZXhwIjoxNTYyNjc5OTAxLCJpc3MiOiJodHRwczovL2FwaS5yZW50b21vam8ubWwvIiwic3ViIjoiSldUQXV0aCJ9.KeSfgRfCvuw3dcN1qFpLhvrlsYoV9JzLvX_A0J5z4IQ
@@ -179,8 +179,8 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImlmY
 **Request**
 ```http request
 POST /comments/upvote
-Host: api.rentomojo.ml:443
 
+Host: api.rentomojo.ml:443
 Content-Type: application/json
 Accept: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImlmYWlzYWxhbGFtMjIiLCJkYXRhIjp7InBhc3N3b3JkIjoiJDJiJDEwJGdVYnMuSlFDekVLL0JiS3Y0eWExaU96clNWMXV6RmNMSU1JLy5yWHU3ODFKTHoxVXhrTUpDIiwidXNlcm5hbWUiOiJpZmFpc2FsYWxhbTIyIn0sImNyZWF0ZVRpbWUiOnsiX3NlY29uZHMiOjE1NjI2NzU5OTQsIl9uYW5vc2Vjb25kcyI6NjY2NzU4MDAwfSwidXBkYXRlVGltZSI6eyJfc2Vjb25kcyI6MTU2MjY3NTk5NCwiX25hbm9zZWNvbmRzIjo2NjY3NTgwMDB9LCJpYXQiOjE1NjI2NzYzMDEsIm5iZiI6MTU2MjY3NjMwMSwiZXhwIjoxNTYyNjc5OTAxLCJpc3MiOiJodHRwczovL2FwaS5yZW50b21vam8ubWwvIiwic3ViIjoiSldUQXV0aCJ9.KeSfgRfCvuw3dcN1qFpLhvrlsYoV9JzLvX_A0J5z4IQ
@@ -212,10 +212,18 @@ Else, if the user can vote the comment, `HTTP Status 201` is returned with the f
         "comment": {
             "id": "eZJx4xE0nbMuAkSTlaoK",
             "data": {
+                "downvotes": 0,
                 "user": "johndoe",
-                "comment": "This is a comment",
                 "upvotes": 1,
-                "downvotes": 0
+                "comment": "This is a comment"
+            },
+            "createTime": {
+                "_seconds": 1562681701,
+                "_nanoseconds": 857927000
+            },
+            "updateTime": {
+                "_seconds": 1562683185,
+                "_nanoseconds": 39553000
             }
         }
     }
@@ -227,8 +235,8 @@ Else, if the user can vote the comment, `HTTP Status 201` is returned with the f
 **Request**
 ```http request
 POST /comments/downvote
-Host: api.rentomojo.ml:443
 
+Host: api.rentomojo.ml:443
 Content-Type: application/json
 Accept: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImlmYWlzYWxhbGFtMjIiLCJkYXRhIjp7InBhc3N3b3JkIjoiJDJiJDEwJGdVYnMuSlFDekVLL0JiS3Y0eWExaU96clNWMXV6RmNMSU1JLy5yWHU3ODFKTHoxVXhrTUpDIiwidXNlcm5hbWUiOiJpZmFpc2FsYWxhbTIyIn0sImNyZWF0ZVRpbWUiOnsiX3NlY29uZHMiOjE1NjI2NzU5OTQsIl9uYW5vc2Vjb25kcyI6NjY2NzU4MDAwfSwidXBkYXRlVGltZSI6eyJfc2Vjb25kcyI6MTU2MjY3NTk5NCwiX25hbm9zZWNvbmRzIjo2NjY3NTgwMDB9LCJpYXQiOjE1NjI2NzYzMDEsIm5iZiI6MTU2MjY3NjMwMSwiZXhwIjoxNTYyNjc5OTAxLCJpc3MiOiJodHRwczovL2FwaS5yZW50b21vam8ubWwvIiwic3ViIjoiSldUQXV0aCJ9.KeSfgRfCvuw3dcN1qFpLhvrlsYoV9JzLvX_A0J5z4IQ
@@ -254,16 +262,24 @@ Else, if the user can vote the comment, `HTTP Status 201` is returned with the f
 ```json
 {
     "status": "success",
-    "code": "DOWNVOTE_SUCCESS",
-    "message": "You downvoted this comment.",
+    "code": "UPVOTE_SUCCESS",
+    "message": "You upvoted this comment.",
     "payload": {
         "comment": {
             "id": "eZJx4xE0nbMuAkSTlaoK",
             "data": {
+                "downvotes": 1,
                 "user": "johndoe",
-                "comment": "This is a comment",
                 "upvotes": 0,
-                "downvotes": 1
+                "comment": "This is a comment"
+            },
+            "createTime": {
+                "_seconds": 1562681701,
+                "_nanoseconds": 857927000
+            },
+            "updateTime": {
+                "_seconds": 1562683185,
+                "_nanoseconds": 39553000
             }
         }
     }
