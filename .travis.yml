@@ -1,0 +1,28 @@
+language: node_js
+node_js:
+  - "8"
+
+branches:
+  only
+    - production
+
+before_script:
+  - cd $TRAVIS_BUILD_DIR/frontend
+  - npm install -g @angular/cli
+
+script:
+  - npm install
+  - ng run build --prod --aot --optimization=true
+
+deploy:
+  skip_cleanup: true
+  provider: firebase
+  token:
+    secure: $FIREBASE_TOKEN
+
+notifications:
+  email:
+    recipients:
+      - ifaisalalam@gmail.com
+    on_success: always
+    on_failure: always
