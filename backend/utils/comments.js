@@ -83,7 +83,7 @@ const upvote = async (commentId, user) => {
                 t.set(voteRef, {vote: 0});
                 t.update(commentRef, {upvotes: comment.data.upvotes - 1});
 
-                return Promise.resolve('UPVOTE_REMOVED');
+                return Promise.resolve(comment);
               }
 
               else if (lastVote === -1) {
@@ -97,7 +97,7 @@ const upvote = async (commentId, user) => {
             const upvotes = comment.data.upvotes + 1;
             t.update(commentRef, {upvotes});
 
-            return Promise.resolve('UPVOTE_SUCCESS');
+            return Promise.resolve(comment);
           });
       })
       .catch(err => {
