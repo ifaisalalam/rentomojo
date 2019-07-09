@@ -5,6 +5,7 @@ const lang = require('../config/lang');
 const commentUtil = require('../utils/comments');
 
 const authMiddleware = require('../middlewares/authMiddleware');
+const commentMiddleware = require('../middlewares/commentMiddleware');
 
 router.use(authMiddleware.user);
 
@@ -53,7 +54,7 @@ router.post('/add', (req, res, next) => {
     })
 });
 
-router.post('/upvote', (req, res, next) => {
+router.post('/upvote', commentMiddleware.canVote, (req, res, next) => {
   const commentRef = req.body.commentId;
 
   commentUtil.upvote(commentRef, req.payload.username)
@@ -80,7 +81,7 @@ router.post('/upvote', (req, res, next) => {
     });
 });
 
-router.post('/downvote', (req, res, next) => {
+router.post('/downvote', commentMiddleware.canVote, (req, res, next) => {
   const commentRef = req.body.commentId;
 
   commentUtil.downvote(commentRef, req.payload.username)

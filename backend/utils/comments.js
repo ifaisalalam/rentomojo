@@ -161,9 +161,22 @@ const downvote = async (commentId, user) => {
   });
 };
 
+const findCommentOwner = async commentId => {
+  const commentRef = firestore.collection(commentsCollection).doc(commentId);
+  const comment = await commentRef.get();
+
+  if (comment.exists) {
+    const commentOwner = comment.data().user;
+    return Promise.resolve(commentOwner);
+  }
+
+  return Promise.reject(new Error('Comment does not exist.'));
+};
+
 module.exports = {
   fetchComments,
   addComment,
   upvote,
-  downvote
+  downvote,
+  findCommentOwner
 };

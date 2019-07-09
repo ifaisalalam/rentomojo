@@ -51,6 +51,10 @@
         "VOTE_ERROR": {
           "code": "VOTE_ERROR",
           "text": "Something went wrong, please try again."
+        },
+        "SELF_VOTE_ERR": {
+          "code": "SELF_VOTE_ERR",
+          "text": "You cannot vote your own comment."
         }
       },
       "generic": {
