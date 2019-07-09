@@ -1,6 +1,6 @@
 # Backend
 
-Link: [https://api.rentomojo.ml](https://api.rentomojo.ml)
+API: [https://api.rentomojo.ml](https://api.rentomojo.ml)
 
 
 ## Usage
