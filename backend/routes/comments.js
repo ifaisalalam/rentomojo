@@ -41,7 +41,7 @@ router.post('/add', (req, res, next) => {
         code: lang.messages.success.comments.add.COMMENT_ADDED.code,
         message: lang.messages.success.comments.add.COMMENT_ADDED.text,
         payload: {
-          comment: ref._path
+          comment: ref
         }
       })
     })
@@ -51,6 +51,8 @@ router.post('/add', (req, res, next) => {
         code: lang.messages.error.comments.NEW_COMMENT_FAILURE.code,
         message: lang.messages.error.comments.NEW_COMMENT_FAILURE.text
       });
+
+      console.log(err);
     })
 });
 
